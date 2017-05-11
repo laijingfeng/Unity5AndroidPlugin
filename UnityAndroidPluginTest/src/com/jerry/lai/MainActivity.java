@@ -9,17 +9,17 @@ public class MainActivity extends UnityPlayerActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		JerryHelper.jerryLog("MainActivity onCreate");
+		JerryHelper.log("MainActivity onCreate");
 		super.onCreate(savedInstanceState);
 	}
 
 	public int GetInt() {
-		JerryHelper.jerryLog("MainActivity GetInt");
+		JerryHelper.log("MainActivity GetInt");
 		return 1000;
 	}
 
 	public void GiveMeAMsg() {
-		JerryHelper.jerryLog("MainActivity GiveMeAMsg");
+		JerryHelper.log("MainActivity GiveMeAMsg");
 		UnityPlayer.UnitySendMessage("Main Camera", "FuncA", "hello");
 	}
 }

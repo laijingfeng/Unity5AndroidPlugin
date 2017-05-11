@@ -7,14 +7,16 @@ public class Main : MonoBehaviour
 
     void OnGUI()
     {
-        GUILayout.Label(strTest);
+        GUILayoutOption[] options = new GUILayoutOption[2] { GUILayout.MinWidth(100), GUILayout.MinHeight(100) };
+        
+        GUILayout.Label(strTest, options);
 
-        if (GUILayout.Button("CallAndroidFunc_GetInt"))
+        if (GUILayout.Button("CallAndroidFunc_GetInt", options))
         {
             strTest = UnityCallAnroid<int>("GetInt", false).ToString();
         }
 
-        if (GUILayout.Button("CallAndroidFunc_GiveMeAMsg"))
+        if (GUILayout.Button("CallAndroidFunc_GiveMeAMsg", options))
         {
             UnityCallAnroid("GiveMeAMsg", false);
         }
